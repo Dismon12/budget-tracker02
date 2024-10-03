@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บันทึกรายรับรายจ่าย</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <div class="balance-container">
+        <h3>เงินคงเหลือ: <span id="balance-amount">0</span> บาท</h3>
+    </div>
+
+    <div class="container">
+        <h1>ระบบบันทึกรายรับรายจ่าย</h1>
+        <form id="transaction-form">
+            <div>
+                <label for="type">ประเภท:</label>
+                <select id="type">
+                    <option value="รายรับ">รายรับ</option>
+                    <option value="รายจ่าย">รายจ่าย</option>
+                </select>
+            </div>
+            <div>
+                <label for="category">หมวดหมู่:</label>
+                <select id="category">
+                    <option value="ข้าวเช้า">ข้าวเช้า</option>
+                    <option value="ข้าวเที่ยง">ข้าวเที่ยง</option>
+                    <option value="ข้าวเย็น">ข้าวเย็น</option>
+                    <option value="เงินพ่อ">เงินพ่อ</option>
+                    <option value="เงินแม่">เงินแม่</option>
+                    <option value="ค่าขนม">ค่าขนม</option>
+                    <option value="ค่าเน็ต">ค่าเน็ต</option>
+                </select>
+            </div>
+            <div>
+                <label for="amount">จำนวนเงิน:</label>
+                <div class="preset-buttons">
+                    <button type="button" class="preset-btn" value="20">20</button>
+                    <button type="button" class="preset-btn" value="50">50</button>
+                    <button type="button" class="preset-btn" value="100">100</button>
+                    <button type="button" class="preset-btn" value="200">200</button>
+                    <button type="button" class="preset-btn" value="300">300</button>
+                    <button type="button" class="preset-btn" value="500">500</button>
+                    <button type="button" class="preset-btn" value="1000">1000</button>
+                </div>
+                <input type="number" id="amount" required placeholder="ใส่จำนวนเงินเอง">
+            </div>
+            <button type="submit">บันทึก</button>
+        </form>
+
+        <h2>รายการทั้งหมด</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ประเภท</th>
+                    <th>หมวดหมู่</th>
+                    <th>จำนวนเงิน</th>
+                    <th>วัน/เวลา</th>
+                    <th>ลบ</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-list"></tbody>
+        </table>
+
+        <button id="download-excel">ดาวน์โหลด Excel</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

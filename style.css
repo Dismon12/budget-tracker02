@@ -1,0 +1,122 @@
+/* ปรับสีให้สบายตา */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2e3b4e;
+    margin: 0;
+    padding: 0;
+    color: #d6d6d6;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #3c4f67;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #a8d0e6;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b0c4de;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #546e7a;
+    color: #d6d6d6;
+}
+
+button {
+    background-color: #29b6f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #0288d1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #4a6572;
+    color: #e0f7fa;
+}
+
+.preset-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.preset-btn {
+    flex: 1;
+    margin-right: 5px;
+    padding: 10px;
+    background-color: #6fa8dc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.preset-btn:hover {
+    background-color: #5593d1;
+}
+
+/* สีสำหรับรายรับและรายจ่าย */
+.income {
+    color: #4caf50;
+}
+
+.expense {
+    color: #f44336;
+}
+
+/* เพิ่มการแสดงผลเงินคงเหลือที่มุมขวาบน */
+.balance-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: #4a6572;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.balance-container h3 {
+    margin: 0;
+    font-size: 18px;
+}
